@@ -235,7 +235,7 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "electron-react-boilerplate",
+      "owner": "zhaojingnan",
       "repo": "electron-react-boilerplate"
     }
   },
