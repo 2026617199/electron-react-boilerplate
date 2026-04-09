@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout git repo
@@ -33,7 +33,5 @@ jobs:
         env:
           # This is used for uploading release assets to github
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Disable mac code signing discovery for unsigned builds
-          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
         run: |
-          npm exec electron-builder -- --publish always --mac
+          npm exec electron-builder -- --publish always --linux
